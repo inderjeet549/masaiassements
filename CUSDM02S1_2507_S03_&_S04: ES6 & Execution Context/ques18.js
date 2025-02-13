@@ -9,7 +9,6 @@ const userProfile = {
       console.log("Invalid age.");
       return;
     }
-
     this.age = newAge;
     console.log(this.details());
   }
