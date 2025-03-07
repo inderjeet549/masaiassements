@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: #FF6347;
+    color: navy;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    display: inline;
+}
+nav li{
+    display: inline-block;
+    color: #ccc;
+}
+
+#about {
+    padding: 40px;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+
+#about div{
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+}
+
+#about img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+#projects {
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.project {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project ul {
+    padding-left: 20px;
+}
+
+#contact {
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+input, textarea {
+    width: 200px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 0.01px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    color:black;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+    text-align: center;
+}
