@@ -1,0 +1,11 @@
+.highlight{
+    color: yellow;
+    font-weight: bold;
+}
+.note{
+    color: darkgreen;
+    text-decoration:italic;
+}
+p{
+    font-size: 16px;
+}
