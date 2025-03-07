@@ -1,0 +1,62 @@
+Debugging Multi-Method CSS Example
+### Introduction
+This document explains the errors found in the given HTML and CSS code and provides the necessary corrections. The goal was to ensure that inline, internal, and external styles apply correctly without syntax errors or rendering issues.
+---
+#### 1. Incorrect Background Color in Internal CSS
+- **Error:**
+  ```css
+  background-color: #f0f0;
+  ```
+  - The hex color `#f0f0` is invalid because hex codes must be **3 or 6 characters** long.
+
+- **Fix:**
+  ```css
+  background-color: #f0f0f0;
+  ```
+  - The corrected **6-digit** hex code ensures proper color rendering.
+
+---
+
+#### **2. Incorrect Color Code in Inline Styles**
+- **Error:**
+  ```html
+  <p style="font-size: 16px; color: #3333;">
+  ```
+  - The hex code `#3333` is invalid because hex color codes must be **3 or 6 characters** long.
+
+- **Fix:**
+  ```html
+  <p style="font-size: 16px; color: #333;">
+  ```
+  - Using `#333` (a valid **3-character shorthand hex code**) properly applies the intended color.
+
+---
+
+#### **3. Missing `<meta name="viewport">` for Responsive Design**
+- **Error:**
+  - The HTML file lacked a viewport meta tag, which can cause **scaling issues on mobile devices**.
+
+- **Fix:**
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+  - This ensures **proper scaling** across different screen sizes.
+
+---
+
+### **Final Verification**
+After applying these corrections, the styles now function as intended:
+- **Inline styles** (e.g., `style="font-size: 16px; color: #333;"`) correctly override other styles.
+- **Internal styles** (inside `<style>` in `<head>`) apply to elements with matching selectors.
+- **External styles** (from `styles.css`) are correctly linked and applied to the `#main-container` div.
+
+These fixes ensure proper styling without syntax errors, following best practices for maintainable and readable CSS.
+
+---
+
+### **Conclusion**
+With these corrections, the HTML and CSS now work **flawlessly**, maintaining consistency across inline, internal, and external styles. By adhering to best practices, we ensure an efficient, error-free, and visually appealing webpage.
+
+---
+**End of Document**
+
