@@ -1,1 +1,29 @@
+Fixes and Improvements Explanation
 
+### 1. Prevented Element Overlapping
+Issue: The `.box` elements were using `position: absolute;`, causing them to overlap.
+Fix: Changed `position: absolute;` to `position: relative;`, ensuring they remain in the normal document flow.
+
+### 2. Ensured Correct Box Sizing
+Issue: Elements were expanding incorrectly due to missing box-sizing rules.
+Fix: Applied `box-sizing: border-box;` globally to include padding and border in element dimensions.
+
+### 3. Properly Aligned Elements Using `display` and `position`
+Issue: `.container` was using `display: block;`, which didn’t align elements properly.
+Fix: Changed it to `display: flex;` with `justify-content: center;` and `gap: 20px;` for spacing.
+
+### 4. Adjusted Text Positioning
+Issue: The `.text` element was using `position: fixed; left: 50%;`, but was not properly centered.
+Fix: Used `position: absolute; left: 50%; transform: translateX(-50%);` for correct centering.
+
+### 5. Improved Responsiveness
+Issue: Layout did not adapt to smaller screens.
+Fix: Added a media query (`@media (max-width: 600px)`) that makes `.container` stack vertically for better mobile support.
+
+### Final Result:
+- No overlapping issues.
+- Proper spacing and alignment.
+- Responsive layout for different screen sizes.
+- A clean and structured webpage following best practices.
+
+Now, the webpage layout is fully functional, properly aligned, and responsive! 🚀
