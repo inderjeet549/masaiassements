@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Display Properties Demonstration</h1>
+    <div class="block-element">Block Element</div>
+    <span class="inline-element">Inline Element</span>
+    <div class="inline-block-element">Inline-Block Element</div>
+    <div class="hidden-element" id="hiddenBox">Hidden Element (toggle me)</div>
+    <button onclick="toggleHidden()">Toggle Hidden Element</button>
+    <script>
+        function toggleHidden() {
+            let box = document.getElementById("hiddenBox");
+            box.style.display = (box.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
