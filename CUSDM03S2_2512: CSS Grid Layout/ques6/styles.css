@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.hero {
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+.hero h1 {
+    font-size: 36px;
+    color: #333;
+}
+.hero p {
+    font-size: 18px;
+    color: #777;
+}
+.investors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+.investor-card {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: white;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.investor-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.investor-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+.investor-logo {
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+}
+.investor-card:hover {
+    transform: scale(1.05);
+}
