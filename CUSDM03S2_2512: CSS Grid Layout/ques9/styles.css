@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    width: 60%;
+}
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.item1 { background: #FF5733; }
+.item2 { background: #33FF57; }
+.item3 { background: #3357FF; }
+.item4 { background: #FF33A1; }
+.item5 { background: #FFD700; }
+.item6 { background: #FF4500; }
+.item7 { background: #800080; }
+.item8 { background: #008080; }
