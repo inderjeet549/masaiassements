@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .task-container {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<div class="task-container">
+    <h2>Task Manager</h2>
+    <input id="taskInput" type="text" placeholder="Enter a task">
+    <button id="addTask">Add Task</button>
+    <div>
+        <button id="showAll">All Tasks</button>
+        <button id="showCompleted">Completed Tasks</button>
+        <button id="showIncomplete">Incomplete Tasks</button>
+        <button id="sortTasks">Sort Tasks</button>
+    </div>
+    <ul id="taskList"></ul>
+    <p>Total: <span id="totalCount">0</span></p>
+    <p>Completed: <span id="completedCount">0</span></p>
+    <p>Incomplete: <span id="incompleteCount">0</span></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
