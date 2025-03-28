@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive DIV</title>
+    <style>
+        #contentBox {
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 150px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive DIV Manipulation</h2>
+    <label for="colorInput">Enter Background Color:</label>
+    <input type="text" id="colorInput" placeholder="e.g., red, blue, green">
+    <button id="changeBgBtn">Change Background</button>
+    <br><br>
+    <label for="textInput">Enter New Text:</label>
+    <input type="text" id="textInput" placeholder="Enter new content">
+    <button id="updateTextBtn">Update Text</button>
+    <br><br>
+    <div id="contentBox">This is a sample text.</div>
+    <script src="script.js"></script>
+</body>
+</html>
