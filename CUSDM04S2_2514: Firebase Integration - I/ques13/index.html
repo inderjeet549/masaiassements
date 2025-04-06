@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update User Info</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>User List</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="userTable"></tbody>
+</table>
+<div id="editForm" style="display:none;">
+  <h2>Edit User</h2>
+  <input type="text" id="editName" placeholder="Name" />
+  <input type="email" id="editEmail" placeholder="Email" />
+  <button id="updateUserBtn">Update User</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
