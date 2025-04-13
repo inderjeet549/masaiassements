@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Throttled Image Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    #slider {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      border: 2px solid #ddd;
+    }
+    #slider img {
+      width: 100%;
+      height: 100%;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+    .button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #slideNumber {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Throttled Image Slider</h1>
+  <div id="slider">
+    <img id="image" src="" alt="Random Image">
+  </div>
+  <div class="buttons">
+    <button class="button" id="prevBtn">Previous</button>
+    <button class="button" id="nextBtn">Next</button>
+  </div>
+  <div id="slideNumber">Slide 1</div>
+  <script>
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const imageElem = document.getElementById('image');
+    const slideNumberElem = document.getElementById('slideNumber');
+    let currentSlide = 1;
+    let clickCount = 0;
+    let lastClickTime = 0;
+    let throttleTimeout;
+    function fetchRandomImage() {
+      fetch('https://picsum.photos/600/400?random')
+        .then(response => response.blob())
+        .then(imageBlob => {
+          const imageUrl = URL.createObjectURL(imageBlob);
+          imageElem.src = imageUrl;
+        })
+        .catch(err => {
+          console.error("Error fetching image:", err);
+        });
+    }
+    function handleClick(callback) {
+      const now = Date.now();
+      if (now - lastClickTime < 1000) {
+        clickCount++;
+        if (clickCount > 3) {
+          alert("Chill chill, loading it!!");
+          clickCount = 0;
+        }
+      } else {
+        clickCount = 1;
+      }
+      lastClickTime = now;
+      if (!throttleTimeout) {
+        throttleTimeout = setTimeout(() => {
+          callback();
+          throttleTimeout = null;
+        }, 1000);
+      }
+    }
+    function updateSlideNumber() {
+      slideNumberElem.innerText = `Slide ${currentSlide}`;
+    }
+    nextBtn.addEventListener('click', function() {
+      handleClick(function() {
+        currentSlide++;
+        updateSlideNumber();
+        fetchRandomImage();
+      });
+    });
+    prevBtn.addEventListener('click', function() {
+      handleClick(function() {
+        if (currentSlide > 1) {
+          currentSlide--;
+          updateSlideNumber();
+          fetchRandomImage();
+        }
+      });
+    });
+    fetchRandomImage();
+    updateSlideNumber();
+  </script>
+</body>
+</html>
