@@ -1,0 +1,162 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Styles */
+.main-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #2d3748;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.header-title-emphasis {
+  font-weight: 700;
+  display: block;
+}
+
+.header-subtitle {
+  color: #718096;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header-subtitle p {
+  margin-bottom: 8px;
+}
+
+/* Pricing Container */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Plan Card Styles */
+.plan-card {
+  background: white;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.highlighted-card {
+  border: 2px solid #4c6fff;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plan-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.plan-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.plan-description {
+  color: #718096;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.plan-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4c6fff;
+  margin-bottom: 25px;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.feature-item {
+  padding: 8px 0;
+  color: #4a5568;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-bullet {
+  color: #4c6fff;
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: 0;
+}
+
+/* Button Styles */
+.cta-button {
+  background: #4c6fff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #3b5bdb;
+}
+
+.highlighted-button {
+  background: white;
+  color: #4c6fff;
+  border: 1px solid #4c6fff;
+}
+
+.highlighted-button:hover {
+  background: #f8f9ff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .plan-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
